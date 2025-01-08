@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personel Yönetimi</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="header">
+    </div>
+
+    <div class="wrapper">
+        <!-- Sidebar -->
+        <div class="sidebar">
+            <h2>Beyaz Işık Klinik Yönetim Sistemi</h2>
+            <div id="datetime" class="datetime"></div>
+            <ul>
+                <li><a href="index.html">Ana Sayfa</a></li>
+                <li><a href="personel.html">Personel Yönetimi</a></li>
+                <li><a href="randevu.html">Randevu Yönetimi</a></li>
+                <li><a href="odeme.html">Ödeme Yönetimi</a></li>
+                <li><a href="hizmet.html">Hizmet Yönetimi</a></li>
+            </ul>
+            <div class="sidebar-logo">
+                <img src="wwwroot/logo.png" alt="Klinik Logo">
+            </div>
+        </div>
+
+        <!-- Ana İçerik -->
+        <div class="main-content">
+            <h1>Personel Yönetimi</h1>
+            <div>
+                <h3>Yeni Personel Ekle</h3>
+                <input type="text" id="ad_soyad" placeholder="Ad Soyad">
+                <input type="text" id="telefon" placeholder="Telefon">
+                <input type="email" id="email" placeholder="Email">
+                <input type="number" id="maas" placeholder="Maaş">
+                <button onclick="addPersonel()">Ekle</button>
+            </div>
+            <div class="filter-container">
+                <div class="filters">
+                    <input type="text" id="search-ad-soyad" placeholder="Ad Soyad Ara">
+                    <input type="text" id="search-telefon" placeholder="Telefon Ara">
+                    <input type="text" id="search-email" placeholder="Email Ara">
+                    <input type="text" id="search-maas" placeholder="Maaş Ara">
+                </div>
+            </div>
+            <!-- Personel Listesi -->
+            <table id="personelTable">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>
+                            Ad Soyad
+                            <span class="sort-icons">
+                                <span class="sort-asc" data-column="ad_soyad">▲</span>
+                                <span class="sort-desc" data-column="ad_soyad">▼</span>
+                            </span>
+                        </th>
+                        <th>
+                            Telefon
+                            <span class="sort-icons">
+                                <span class="sort-asc" data-column="telefon">▲</span>
+                                <span class="sort-desc" data-column="telefon">▼</span>
+                            </span>
+                        </th>
+                        <th>
+                            Email
+                            <span class="sort-icons">
+                                <span class="sort-asc" data-column="email">▲</span>
+                                <span class="sort-desc" data-column="email">▼</span>
+                            </span>
+                        </th>
+                        <th>
+                            Maaş
+                            <span class="sort-icons">
+                                <span class="sort-asc" data-column="maas">▲</span>
+                                <span class="sort-desc" data-column="maas">▼</span>
+                            </span>
+                        </th>
+                        <th>İşlemler</th>
+                    </tr>
+                </thead>
+
+                <tbody></tbody>
+            </table>
+
+        </div>
+    </div>
+    <script src="backend/functions/ortak.js"></script>
+    <script src="backend/functions/personel.js"></script>
+    <script>
+        fetchPersoneller();
+    </script>
+</body>
+
+</html>

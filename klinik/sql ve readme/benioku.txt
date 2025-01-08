@@ -1,0 +1,4 @@
+ host: 'localhost',   // MySQL sunucu adresi
+    user: 'root',        // MySQL kullanıcı adı
+    password: 'root',        // MySQL şifresi
+    database: 'klinik'   // Veritabanı adı

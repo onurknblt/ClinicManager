@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hizmet Yönetimi</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="header">
+    </div>
+
+    <div class="wrapper">
+        <!-- Sidebar -->
+        <div class="sidebar">
+            <h2>Beyaz Işık Klinik Yönetim Sistemi</h2>
+            <div id="datetime" class="datetime"></div>
+            <ul>
+                <li><a href="index.html">Ana Sayfa</a></li>
+                <li><a href="personel.html">Personel Yönetimi</a></li>
+                <li><a href="randevu.html">Randevu Yönetimi</a></li>
+                <li><a href="odeme.html">Ödeme Yönetimi</a></li>
+                <li><a href="hizmet.html">Hizmet Yönetimi</a></li>
+            </ul>
+            <div class="sidebar-logo">
+                <img src="wwwroot/logo.png" alt="Klinik Logo">
+            </div>
+        </div>
+
+        <!-- Ana İçerik -->
+        <div class="main-content">
+            <h1>Hizmet Yönetimi</h1>
+            <div>
+                <h3>Yeni Hizmet Ekle</h3>
+                <input type="text" id="ad" placeholder="Hizmet Adı">
+                <input type="number" id="ucret" placeholder="Ücret">
+                <button onclick="addHizmet()">Ekle</button>
+            </div>
+
+
+            <!-- Hizmet Listesi -->
+            <table id="hizmetTable">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Hizmet Adı</th>
+                        <th>Ücret</th>
+                        <th>İşlemler</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Dinamik Satırlar -->
+                </tbody>
+            </table>
+
+
+        </div>
+    </div>
+    <script src="backend/functions/ortak.js"></script>
+    <script src="backend/functions/hizmet.js"></script>
+    <script>
+        fetchHizmetler();
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anasayfa </title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body>
+    <div class="header">
+    </div>
+
+    <div class="wrapper">
+        <!-- Sidebar -->
+        <div class="sidebar">
+            <h2>Beyaz Işık Klinik Yönetim Sistemi</h2>
+            <div id="datetime" class="datetime"></div>
+            <ul>
+                <li><a href="index.html">Anasayfa</a></li>
+                <li><a href="personel.html">Personel Yönetimi</a></li>
+                <li><a href="randevu.html">Randevu Yönetimi</a></li>
+                <li><a href="odeme.html">Ödeme Yönetimi</a></li>
+                <li><a href="hizmet.html">Hizmet Yönetimi</a></li>
+            </ul>
+            <div class="sidebar-logo">
+                <img src="wwwroot/logo.png" alt="Klinik Logo">
+            </div>
+        </div>
+
+        <!-- Ana İçerik -->
+        <div class="main-content">
+            <h1>Hoş Geldiniz!</h1>
+
+            <!-- Sayı Kartları -->
+            <div class="dashboard-cards">
+                <div class="card">
+                    <h3>Aktif Randevu Sayısı</h3>
+                    <p id="activeAppointments">0</p>
+                </div>
+                <div class="card">
+                    <h3>Alınan Toplam Ödeme Miktarı</h3>
+                    <p id="totalPayments">0₺</p>
+                </div>
+                <div class="card">
+                    <h3>Bekleyen Toplam Ödeme Miktarı</h3>
+                    <p id="pendingPayments">0₺</p>
+                </div>
+                <div class="card">
+                    <h3>Aktif Personel Sayısı</h3>
+                    <p id="totalStaff">0</p>
+                </div>
+            </div>
+
+
+            <!-- Grafik Alanı -->
+            <h2>Grafikler</h2>
+            <div class="charts">
+                <canvas id="appointmentChart"></canvas>
+                <canvas id="serviceChart"></canvas>
+            </div>
+
+            <!-- Tablo Özeti -->
+            <h2>Aktif Randevular</h2>
+            <table id="activeAppointmentsTable">
+                <thead>
+                    <tr>
+                        <th>Hasta Adı</th>
+                        <th>Tarih ve Saat</th>
+                        <th>Hizmet</th>
+                        <th>Personel</th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+
+            <h2>Bekleyen Ödemeler</h2>
+            <table id="pendingPaymentsTable">
+                <thead>
+                    <tr>
+                        <th>Hasta Adı</th>
+                        <th>Ödenen Tutar</th>
+                        <th>Fatura Tarihi</th>
+                        <th>İşlem Tarihi</th>
+                        <th>Personel</th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+
+        </div>
+    </div>
+
+    <script src="backend/functions/ortak.js"></script>
+    <script src="backend/functions/index.js"></script>
+</body>
+
+</html>

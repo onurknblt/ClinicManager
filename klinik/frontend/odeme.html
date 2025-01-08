@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ödeme Yönetimi</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="header">
+    </div>
+
+    <div class="wrapper">
+        <!-- Sidebar -->
+        <div class="sidebar">
+            <h2>Beyaz Işık Klinik Yönetim Sistemi</h2>
+            <div id="datetime" class="datetime"></div>
+            <ul>
+                <li><a href="index.html">Ana Sayfa</a></li>
+                <li><a href="personel.html">Personel Yönetimi</a></li>
+                <li><a href="randevu.html">Randevu Yönetimi</a></li>
+                <li><a href="odeme.html">Ödeme Yönetimi</a></li>
+                <li><a href="hizmet.html">Hizmet Yönetimi</a></li>
+            </ul>
+            <div class="sidebar-logo">
+                <img src="wwwroot/logo.png" alt="Klinik Logo">
+            </div>
+        </div>
+
+        <!-- Ana İçerik -->
+        <div class="main-content">
+            <h1>Ödeme Yönetimi</h1>
+            <div class="filter-container">
+                <div class="filters">
+                    <input type="text" id="search-hasta-ad" placeholder="Hasta Adı Ara">
+                    <input type="text" id="search-tutar" placeholder="Tutar Ara">
+                    <input type="text" id="search-tarih" placeholder="Fatura Tarihi Ara">
+                    <input type="text" id="search-islem-tarihi" placeholder="İşlem Tarihi Ara">
+                    <input type="text" id="search-personel" placeholder="Personel Ara">
+                </div>                
+            </div>
+            <!-- Mevcut Ödemeler -->
+            <table id="odemeTable">
+
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>
+                            Hasta Adı
+                            <span class="sort-icons">
+                                <span class="sort-asc" data-column="hasta_ad">▲</span>
+                                <span class="sort-desc" data-column="hasta_ad">▼</span>
+                            </span>
+                        </th>
+                        <th>
+                            Ödeme Tutarı
+                            <span class="sort-icons">
+                                <span class="sort-asc" data-column="odenen_tutar">▲</span>
+                                <span class="sort-desc" data-column="odenen_tutar">▼</span>
+                            </span>
+                        </th>
+                        <th>
+                            Ödeme Türü
+                            <span class="sort-icons">
+                                <span class="sort-asc" data-column="odeme_turu">▲</span>
+                                <span class="sort-desc" data-column="odeme_turu">▼</span>
+                            </span>
+                        </th>
+                        <th>
+                            Fatura Tarihi
+                            <span class="sort-icons">
+                                <span class="sort-asc" data-column="fatura_tarihi">▲</span>
+                                <span class="sort-desc" data-column="fatura_tarihi">▼</span>
+                            </span>
+                        </th>
+                        <th>
+                            İşlem Tarihi
+                            <span class="sort-icons">
+                                <span class="sort-asc" data-column="islem_tarihi">▲</span>
+                                <span class="sort-desc" data-column="islem_tarihi">▼</span>
+                            </span>
+                        </th>
+                        <th>
+                            Personel
+                            <span class="sort-icons">
+                                <span class="sort-asc" data-column="personel">▲</span>
+                                <span class="sort-desc" data-column="personel">▼</span>
+                            </span>
+                        </th>
+                        <th>İşlemler</th>
+                    </tr>
+                </thead>
+                
+                <tbody></tbody>
+            </table>
+        </div>
+    </div>
+    <script src="backend/functions/ortak.js"></script>
+    <script src="backend/functions/odeme.js"></script>
+    <script>
+        fetchOdemeler();
+    </script>
+</body>
+
+</html>

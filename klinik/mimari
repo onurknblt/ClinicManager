@@ -1,0 +1,30 @@
+KLİNİK/
+├── backend/                   // Backend (sunucu tarafı) dosyaları
+│   ├── functions/             // Backend fonksiyonları ve modülleri
+│   │   ├── hizmet.js          // Hizmet yönetimi backend işlemleri
+│   │   ├── index.js           // Dashboard ve genel işlemler için backend
+│   │   ├── login.js           // Giriş işlemleriyle ilgili backend kodları
+│   │   ├── odeme.js           // Ödeme işlemleri backend işlemleri
+│   │   ├── ortak.js           // Ortak yardımcı fonksiyonlar
+│   │   ├── personel.js        // Personel yönetimi backend işlemleri
+│   │   ├── randevu.js         // Randevu yönetimi backend işlemleri
+│   ├── api.js                 // API uç noktalarını ve yönlendirmeleri içerir
+│   ├── server.js              // Sunucu başlangıç dosyası (Express.js sunucusu)
+├── frontend/                  // Kullanıcı arayüzü (frontend) dosyaları
+│   ├── wwwroot/               // Statik dosyalar (görseller ve medya)
+│   │   ├── background.mp4     // Giriş ekranı arka plan videosu
+│   │   ├── logo.png           // Klinik logosu
+│   ├── hizmet.html            // Hizmet yönetimi ekranı
+│   ├── index.html             // Ana sayfa (Dashboard)
+│   ├── login.html             // Admin giriş ekranı
+│   ├── odeme.html             // Ödeme yönetimi ekranı
+│   ├── personel.html          // Personel yönetimi ekranı
+│   ├── randevu.html           // Randevu yönetimi ekranı
+│   ├── login.css              // Login ekranı için özel CSS
+│   ├── style.css              // Genel stil dosyası (diğer sayfalar için)
+├── sql ve readme/             // SQL ve proje dokümantasyon dosyaları
+│   ├── benioku.txt            // Proje açıklama dosyası
+│   ├── klinik.sql             // MySQL veritabanı tabloları ve başlangıç verileri
+├── node_modules/              // Node.js bağımlılıkları (otomatik oluşturulur)
+├── package.json               // Node.js bağımlılık bilgileri ve komutları
+├── package-lock.json          // Node.js bağımlılık sürüm kilitleme dosyası
